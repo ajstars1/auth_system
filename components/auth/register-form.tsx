@@ -58,11 +58,25 @@ export const RegisterForm = () => {
       showSocial
     >
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit )}
-          className="space-y-6"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="space-y-4">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field}
+                      disabled={isPending}
+                      placeholder="Rahul Sharma"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
             <FormField
               control={form.control}
               name="email"
@@ -80,54 +94,33 @@ export const RegisterForm = () => {
                   <FormMessage />
                 </FormItem>
               )}
-              />
+            />
             <FormField
               control={form.control}
-              name="name"
+              name="password"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>Password</FormLabel>
                   <FormControl>
                     <Input
                       {...field}
                       disabled={isPending}
-                      placeholder="Rahul Sharma"
+                      type="password"
+                      placeholder="******"
                     />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
-              />
-              <FormField
-                control={form.control}
-                name="password"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Password</FormLabel>
-                    <FormControl>
-                      <Input
-                        {...field}
-                        disabled={isPending}
-                        type="password"
-                        placeholder="******"
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
             />
           </div>
           <FormError message={error} />
           <FormSuccess message={success} />
-          <Button
-            disabled={isPending}
-            className="w-full"
-            type="submit"
-          >
+          <Button disabled={isPending} className="w-full" type="submit">
             Create an account
           </Button>
         </form>
       </Form>
     </CardWrapper>
-  )
+  );
 }
