@@ -56,7 +56,8 @@ export const LoginForm = () => {
 
   return (
     <CardWrapper
-      headerlabel="Welcome back"
+      headerlabel="Login Page"
+      label="Welcome back! 👋"
       backButtonLabel="Don't have an account?"
       backButtonHref="/auth/register"
       showSocial
@@ -102,9 +103,7 @@ export const LoginForm = () => {
                     asChild
                     className="px-0 font-normal"
                   >
-                    <Link href={"/auth/reset"}>
-                      Forgot Password?
-                    </Link>
+                    <Link href={"/auth/reset"}>Forgot Password?</Link>
                   </Button>
                   <FormMessage />
                 </FormItem>
