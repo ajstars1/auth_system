@@ -1,6 +1,6 @@
 # Auth_System
 
-This is a repository for an Advanced Authentication service System with Auth.js for your Personal NextJs project with Credentials and OAuth Providers in your Database.
+This is a repository for an Advanced Authentication System with Auth.js for your Personal NextJs project with Credentials and OAuth Providers in your Database.
 
 
 ## Feature
