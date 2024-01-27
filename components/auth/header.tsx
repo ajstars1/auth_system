@@ -8,7 +8,7 @@ const font = Poppins({
 
 interface HeaderProps {
   headerLabel: string;
-  label: string;
+  label?: string;
 }
 
 export const Header = ({ headerLabel , label }: HeaderProps) => {

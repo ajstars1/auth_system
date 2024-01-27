@@ -38,9 +38,7 @@ export const ResetForm = () => {
   const onSubmit = (values: z.infer<typeof ResetSchema>) => {
     setError("");
     setSuccess("");
-    
-    console.log("values", values);
-    startTransition(() => {
+        startTransition(() => {
       reset(values)
         .then((data) => {
           setError(data?.error);
