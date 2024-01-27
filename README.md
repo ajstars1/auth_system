@@ -1,5 +1,8 @@
 # Auth_System
 
+![Auth_System Icon](https://github.com/ajstars1/auth_system/assets/53529358/350db7d6-9b40-4e27-99aa-31ff99728305)
+
+
 This is a repository for an Advanced Authentication System with Auth.js for your Personal NextJs project with Credentials and OAuth Providers in your Database.
 
 
